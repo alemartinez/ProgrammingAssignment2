@@ -1,17 +1,16 @@
-## Put comments here that give an overall description of what your
-## functions do
+##Pair of functions that calculate and cache the inverse of a Matrix.
 
-## Write a short comment describing this function
+##These functions are practically the same as the Prof. Peng published. I just changed the prototypes as requested,
+##renamed the variables and changed the function mean() to solve(). For that, R is that awesome.
+##Please don't misunderstand me. Sorry if it looks lazy, I just made the minimal changes in order for the function to
+##work as requested and be comprehensible (don't want to left "means" everywhere)
 
-###MY COMMENTS
-##These functions are practically the same as the Prof. Peng ##published. I just changed the prototypes, renamed the variables
-##and changed the function mean to solve()
-##For that, R is that awesome.
-##Sorry if it looks lazy, it didn't look like it needed more changes.
 
-###
-##The function does the same as Prof. Peng does. only difference here is the renaming of variables
-##A Matrix with with get and set of the matrix to calculate the inverse; as well as get and set of the inverse.
+
+
+##This function "makeCacheMatrix" does the same as Prof. Peng's vector does. 
+##The only difference here is the renaming of variables. A Matrix with 
+##get and set of the matrix to calculate its inverse, as well as get and set of the inverse matrix.
 
 
 makeCacheMatrix <- function(x = matrix()) {
@@ -29,13 +28,13 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
 
-###MY COMMENTS
-## This functions gets the inverted matrix. If available 
-## it returns the result without calculating it; if not, it calculates it
+
+## This function calculates the inverted matrix if not previously calculated; if already calculated, it returns it
+##It's necessary a cacheMatrix as input.
 
 ##I just changed mean() for solve(), and used the renamed get and set for the result.  
+
 cacheSolve <- function(x, ...) {
   invMat <- x$getInvMat()
   #If not null, mean already calculated, just printed
